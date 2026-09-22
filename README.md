@@ -1,36 +1,213 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fillware Technologies Website
+
+A modern, responsive redesign of the Fillware Technologies website, built with **Next.js**, **TypeScript**, and **Tailwind CSS**.
+
+The website provides information about Fillware's pharmacy management solutions, point-of-sale system, features, integrations, support services, and company information.
+
+## Features
+
+- Modern responsive interface
+- Desktop and mobile navigation
+- Animated route transitions
+- Responsive typography and layouts
+- Custom Fillware brand theme
+- Pharmacy management system overview
+- Point-of-Sale system overview
+- Interactive feature showcase
+- Partner and integration directory
+- Support information and hours
+- Pharmacy resource links
+- Contact form and location map
+- Social media integration
+- Optimized images with Next.js Image
+- Mobile-friendly design
+
+## Pages
+
+| Route | Description |
+| --- | --- |
+| `/` | Homepage |
+| `/about` | About Fillware Technologies |
+| `/rx` | Fillware RX Management System |
+| `/pos` | Fillware Point-of-Sale System |
+| `/features` | Fillware features and services |
+| `/partners` | Partners and integrations |
+| `/support` | Support services and hours |
+| `/links` | Pharmacy and support resources |
+| `/contact` | Contact information and form |
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) — React framework
+- [React](https://react.dev/) — User interface
+- [TypeScript](https://www.typescriptlang.org/) — Type-safe JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) — Styling
+- [React Icons](https://react-icons.github.io/react-icons/) — Interface and social icons
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Install:
+
+- Node.js
+- npm or pnpm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+cd <repository-name>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+or:
+
+```bash
+pnpm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+or:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open:
 
-## Learn More
+```text
+http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+├── app/
+│   ├── about/
+│   ├── contact/
+│   ├── features/
+│   ├── links/
+│   ├── partners/
+│   ├── pos/
+│   ├── rx/
+│   ├── support/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── components/
+│   ├── Navbar.tsx
+│   ├── Footer.tsx
+│   └── PageTransition.tsx
+│
+├── public/
+│   ├── partners/
+│   ├── bg.svg
+│   └── logo.png
+│
+└── README.md
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Responsive Design
 
-## Deploy on Vercel
+The website is designed to adapt across desktop, laptop, tablet, and mobile displays.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+On large (`xl`) screens, the site uses the full desktop navigation and original desktop layout.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+On smaller screens:
+
+- Navigation collapses into a hamburger menu
+- Fillware logo remains centered
+- Content width expands to better use available screen space
+- Typography scales down automatically
+- Page spacing is reduced
+- Footer adapts for narrow displays
+
+## Route Transitions
+
+Page content uses a lightweight route transition when navigating between pages.
+
+```css
+@keyframes routeEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.995);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-route-enter {
+  animation: routeEnter 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+```
+
+The transition is triggered using the current Next.js pathname so it runs during client-side navigation as well as initial page loading.
+
+## Brand Colors
+
+The website uses a custom Tailwind theme derived from the Fillware visual identity.
+
+Primary colors use the `brand` palette:
+
+```text
+brand-500  #368fd0
+brand-600  #29629d
+brand-700  #245386
+brand-800  #21466f
+brand-900  #1e3f73
+```
+
+Accent colors use the Fillware red palette:
+
+```text
+accent-500  #e82e2e
+accent-600  #d11217
+accent-700  #b00d12
+```
+
+## Support Hours
+
+Fillware Technologies is open seven days a week.
+
+| Day | Hours |
+| --- | --- |
+| Monday – Friday | 8:30 AM – 9:00 PM |
+| Saturday | 8:30 AM – 5:30 PM |
+| Sunday | 9:00 AM – 5:00 PM |
+
+## Contact
+
+**Fillware Technologies Inc.**
+
+6375 Dixie Road, Suite 302  
+Mississauga, Ontario L5T 2E7  
+Canada
+
+Phone: (905) 564-0501  
+Toll Free: (866) 764-6443  
+Fax: (905) 564-9056
+
+General: info@fillware.com  
+Sales: sales@fillware.com  
+Support: support@fillware.com
+
+## Copyright
+
+Copyright © Fillware Technologies. All Rights Reserved.
