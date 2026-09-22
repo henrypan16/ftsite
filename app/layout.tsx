@@ -35,6 +35,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 				"font-sans",
 				inter.variable,
 			)}>
+			<meta
+				name="viewport"
+				content="width=device-width, initial-scale=1.0"></meta>
 			<body
 				className="
       mx-auto flex min-h-screen flex-col

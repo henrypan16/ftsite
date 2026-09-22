@@ -40,7 +40,7 @@ export default function Footer() {
 							rel="noopener noreferrer"
 							aria-label="Instagram"
 							className="text-slate-400 transition-colors hover:text-brand-600">
-							<FaInstagram className="h-6 w-6 xl:h-[30px] xl:w-[30px]" />
+							<FaInstagram className="h-6 w-6 xl:h-7.5 xl:w-7.5" />
 						</Link>
 
 						<Link
@@ -49,7 +49,7 @@ export default function Footer() {
 							rel="noopener noreferrer"
 							aria-label="LinkedIn"
 							className="text-slate-400 transition-colors hover:text-brand-600">
-							<FaLinkedinIn className="h-6 w-6 xl:h-[30px] xl:w-[30px]" />
+							<FaLinkedinIn className="h-6 w-6 xl:h-7.5 xl:w-7.5" />
 						</Link>
 					</div>
 				</div>

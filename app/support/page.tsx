@@ -62,20 +62,20 @@ export default function SupportPage() {
 						grows, our team is here to help.
 					</p>
 
-					<div className="mt-7 flex items-center gap-8">
+					<div className="mt-7 flex items-center gap-8 sm:flex-row flex-col">
 						{/* Contact Button */}
 						<Link
 							href="/contact"
 							className="
-      rounded-xl
-      bg-brand-600
-      px-6
-      py-3
-      font-medium
-      text-white
-      transition
-      hover:bg-brand-700
-    ">
+						rounded-xl
+						bg-brand-600
+						px-6
+						py-3
+						font-medium
+						text-white
+						transition
+						hover:bg-brand-700
+						">
 							Contact Support
 						</Link>
 
