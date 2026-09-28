@@ -35,57 +35,47 @@ const supportItems = [
 
 export default function SupportPage() {
 	return (
-		<main className="flex w-full flex-1 items-center py-4">
-			<section className="grid w-full grid-cols-1 gap-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-center">
+		<main className="flex w-full flex-1 items-center py-8 sm:py-10 lg:py-12 xl:py-4">
+			<section className="grid w-full min-w-0 grid-cols-1 gap-10 md:gap-12 lg:gap-14 xl:grid-cols-[0.9fr_1.1fr] xl:items-center xl:gap-10">
 				{/* Left */}
-				<div>
-					<p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-500">
+				<div className="min-w-0">
+					<p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-500 sm:text-sm sm:tracking-[0.25em]">
 						Fillware Support
 					</p>
 
-					<h1 className="mt-3 text-5xl font-bold leading-[1.05] tracking-tight text-brand-800">
+					<h1 className="mt-3 text-3xl font-bold leading-[1.1] tracking-tight text-brand-800 sm:text-4xl md:text-5xl xl:text-5xl xl:leading-[1.05]">
 						More than support.
 						<span className="block text-brand-500">
 							A partner in your success.
 						</span>
 					</h1>
 
-					<p className="mt-5 max-w-xl text-lg leading-8 text-slate-600">
+					<p className="mt-4 max-w-xl text-base leading-7 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">
 						Our commitment continues long after implementation.
 						Fillware provides dependable, knowledgeable support to
 						help your business operate with confidence.
 					</p>
 
-					<p className="mt-3 max-w-xl leading-7 text-slate-500">
+					<p className="mt-3 max-w-xl text-sm leading-6 text-slate-500 sm:text-base sm:leading-7">
 						Whether you need help resolving an issue, planning an
 						upgrade, or adapting your technology as your pharmacy
 						grows, our team is here to help.
 					</p>
 
-					<div className="mt-7 flex items-center gap-8 sm:flex-row flex-col">
-						{/* Contact Button */}
+					{/* Contact and Hours */}
+					<div className="mt-7 flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-8">
 						<Link
 							href="/contact"
-							className="
-						rounded-xl
-						bg-brand-600
-						px-6
-						py-3
-						font-medium
-						text-white
-						transition
-						hover:bg-brand-700
-						">
+							className="inline-flex shrink-0 items-center justify-center rounded-xl bg-brand-600 px-6 py-3 text-sm font-medium text-white transition hover:bg-brand-700 sm:text-base">
 							Contact Support
 						</Link>
 
-						{/* Support Hours */}
-						<div className="border-l-2 border-brand-300 pl-5">
-							<p className="mb-1 text-sm font-semibold text-brand-700">
+						<div className="border-l-2 border-brand-300 pl-4 sm:pl-5">
+							<p className="mb-2 text-sm font-semibold text-brand-700">
 								Support Hours
 							</p>
 
-							<div className="grid grid-cols-[80px_1fr] gap-x-4 gap-y-0.5 text-sm text-slate-500">
+							<div className="grid grid-cols-[76px_1fr] gap-x-3 gap-y-1 text-xs text-slate-500 sm:grid-cols-[80px_1fr] sm:gap-x-4 sm:text-sm">
 								<span>Mon – Fri</span>
 								<span>8:30 AM – 9:00 PM</span>
 
@@ -100,14 +90,14 @@ export default function SupportPage() {
 				</div>
 
 				{/* Right */}
-				<div className="grid grid-cols-2 gap-x-8 gap-y-6">
+				<div className="grid min-w-0 grid-cols-1 gap-x-6 gap-y-6 min-[400px]:grid-cols-2 sm:gap-x-8 sm:gap-y-8 md:gap-x-10 xl:gap-x-8 xl:gap-y-6">
 					{supportItems.map((item, index) => (
-						<div key={item.title} className="group">
+						<div key={item.title} className="group min-w-0">
 							<div className="mb-2 text-xs font-bold tracking-widest text-brand-400">
-								0{index + 1}
+								{String(index + 1).padStart(2, "0")}
 							</div>
 
-							<h2 className="text-lg font-semibold text-brand-800">
+							<h2 className="text-base font-semibold leading-snug text-brand-800 sm:text-lg">
 								{item.title}
 							</h2>
 

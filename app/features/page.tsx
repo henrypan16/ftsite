@@ -233,11 +233,11 @@ function FeatureCard({
 			onClick={onToggle}
 			aria-expanded={flipped}
 			aria-label={`${title}: ${description}`}
-			className="group relative h-32 w-full cursor-pointer appearance-none border-0 bg-transparent p-0 text-inherit [perspective:1000px] sm:h-30 md:h-28">
+			className="group relative h-32 w-full cursor-pointer appearance-none border-0 bg-transparent p-0 text-inherit perspective-[1000px] sm:h-30 md:h-28">
 			<div
-				className={`relative h-full w-full transition-transform duration-400 [transform-style:preserve-3d] [will-change:transform] lg:group-hover:[transform:rotateY(180deg)] ${flipped ? "[transform:rotateY(180deg)]" : "[transform:rotateY(0deg)]"}`}>
+				className={`relative h-full w-full transition-transform duration-400 transform-3d will-change-transform lg:group-hover:transform-[rotateY(180deg)] ${flipped ? "transform-[rotateY(180deg)]" : "transform-[rotateY(0deg)]"}`}>
 				{/* FRONT */}
-				<div className="absolute inset-0 flex flex-col items-center justify-center gap-2 rounded-xl border border-brand-100 bg-white/75 p-2 text-center shadow-sm backdrop-blur-md transition [backface-visibility:hidden] sm:gap-3 sm:rounded-2xl sm:p-3 lg:group-hover:border-brand-300 lg:group-hover:shadow-xl">
+				<div className="absolute inset-0 flex flex-col items-center justify-center gap-2 rounded-xl border border-brand-100 bg-white/75 p-2 text-center shadow-sm backdrop-blur-md transition backface-hidden sm:gap-3 sm:rounded-2xl sm:p-3 lg:group-hover:border-brand-300 lg:group-hover:shadow-xl">
 					<div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-600 sm:size-9 sm:rounded-xl">
 						<FeatureIcon type={icon} />
 					</div>
@@ -248,7 +248,7 @@ function FeatureCard({
 				</div>
 
 				{/* BACK */}
-				<div className="absolute inset-0 flex flex-col items-center justify-center overflow-hidden rounded-xl bg-brand-600 px-2 py-2 text-center text-white shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)] sm:rounded-2xl sm:px-3 md:px-2 xl:px-3">
+				<div className="absolute inset-0 flex flex-col items-center justify-center overflow-hidden rounded-xl bg-brand-600 px-2 py-2 text-center text-white shadow-xl backface-hidden transform-[rotateY(180deg)] sm:rounded-2xl sm:px-3 md:px-2 xl:px-3">
 					<h3 className="mb-1 shrink-0 text-xs font-semibold leading-tight sm:text-sm">
 						{title}
 					</h3>
