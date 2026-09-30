@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function ContactPage() {
 	return (
 		<main className="flex w-full flex-1 items-center py-4">
-			<section className="grid w-full grid-cols-1 gap-8 xl:grid-cols-[0.9fr_1.1fr] xl:items-center">
+			<section className="grid w-full grid-cols-1 gap-8 xl:grid-cols-[0.9fr_1.1fr] xl:items-center 2xl:left-1/2 2xl:w-[80vw] 2xl:-translate-x-1/2 2xl:relative">
 				{/* LEFT */}
 				<div>
 					<p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-500">
@@ -17,7 +17,7 @@ export default function ContactPage() {
 						</span>
 					</h1>
 
-					<div className="mt-5 grid grid-cols-2 gap-x-8 gap-y-4 text-sm">
+					<div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-sm w-fit">
 						<ContactItem title="Office">
 							<p>Fillware Technologies Inc.</p>
 							<p>6375 Dixie Road, Suite 302</p>

@@ -45,7 +45,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       sm:w-[90%] sm:pt-6
       md:w-5/6 md:pt-8
       lg:w-4/5 lg:pt-10
-      xl:w-2/3 xl:pt-12
+      xl:w-5/6 xl:pt-12
+	  2xl:w-2/3 2xl:pt-12
       bg-[url('/bg.svg')]
       bg-cover bg-center bg-fixed bg-no-repeat
     ">
